@@ -1,0 +1,16 @@
+{
+  "name": "alpine",
+  "base": "alpine",
+  "author": {
+    "name": "Van Nguyen",
+    "email": "van@ebex.com.au"
+  },
+  "license": "UNLICENSED",
+  "version": "latest",
+  "description": "Docker build for Bitbucket Pipelines",
+  "scripts": {
+    "pull": "docker pull $npm_package_base",
+    "build": "yarn pull && docker build -t $npm_package_name .",
+    "start": "yarn build && docker run -it $npm_package_name /bin/bash"
+  }
+}

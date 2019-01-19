@@ -1,0 +1,17 @@
+KEYMAPOPTS="us us"
+HOSTNAMEOPTS="-n cloud"
+
+INTERFACESOPTS="auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+    hostname cloud
+"
+
+TIMEZONEOPTS="-z UTC"
+APKREPOSOPTS="-1"
+SSHDOPTS="-c dropbear"
+NTPOPTS="-c chrony"
+DISKOPTS="-m data /dev/sda"
+APKCACHEOPTS="/var/cache/apk"

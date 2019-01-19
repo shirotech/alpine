@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wget https://raw.githubusercontent.com/van-nguyen/alpine/master/answerfile
+setup-alpine -f answerfile
